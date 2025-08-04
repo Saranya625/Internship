@@ -3,32 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Website</title>
   <link rel="stylesheet" href="style.css" />
-  <title>Document</title>
 </head>
 <body>
+ 
   <header>
     <div class="logo">MyLogo</div>
-    <nav>
+    <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
+      <button class="hamburger">&#9776;</button>
     </nav>
   </header>
 
+  
   <section class="hero">
-    <h1>Welcome to Website</h1>
-    <p>This is a simple hero section with button.</p>
+    <h1>Welcome to My Website</h1>
+    <p>Your one-stop solution for everything awesome.</p>
     <button class="cta-button">Get Started</button>
   </section>
 
   <footer>
-    <a href="#contact">Contact Us</a>
-    <a href="#instagram">Instagram</a>
-    <a href="#facebook">Facebook</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
   </footer>
+
+  <script>
+    
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
