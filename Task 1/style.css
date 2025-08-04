@@ -1,25 +1,25 @@
-
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  background-color: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
   color: #333;
-  line-height: 1.6;
 }
 
-
+/* Header */
 header {
+  background-color: #0d6efd;
+  color: white;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0d6efd;
-  color: #fff;
-  padding: 1rem 2rem;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -27,25 +27,47 @@ header {
   font-weight: bold;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  
 }
 
 .nav-links li a {
+    padding: 5px;
   color: white;
   text-decoration: none;
   font-weight: 500;
 }
 
 .nav-links li a:hover {
+    padding: 5px;
+    border-radius: 10%;
+   color: #0d6efd;
+   background-color: white;
   text-decoration: underline;
 }
 
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+
 .hero {
-  text-align: center;
   padding: 5rem 2rem;
+  text-align: center;
   background-color: #e9ecef;
 }
 
@@ -60,11 +82,11 @@ header {
 }
 
 .cta-button {
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  color: #fff;
   background-color: #0d6efd;
+  color: white;
   border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -75,19 +97,40 @@ header {
 
 footer {
   background-color: #343a40;
-  color: #fff;
+  color: white;
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
 }
 
 footer a {
-  color: #adb5bd;
-  margin: 0 1rem;
+  color: #ccc;
   text-decoration: none;
+  margin: 0 0.5rem;
   font-size: 0.9rem;
 }
 
 footer a:hover {
   color: white;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0d6efd;
+    position: absolute;
+    top: 70px;
+    right: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
